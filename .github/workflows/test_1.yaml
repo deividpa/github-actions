@@ -13,17 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Hola mundo
-      run: echo "Hola mundo"
+    - name: Checkout
+      uses: actions/checkout@v4.1.7
 
-    - name: Touch file
-      run: touch hola.txt
-
-    - name: Set text
-      run: echo "Hola mundo" >> hola.txt
-
-    - name: Read text
-      run: cat hola.txt
+    - name: ls
+      run: |
+        chmod +x script.sh
+        ./script.sh
 
   other:
     runs-on: ubuntu-latest
