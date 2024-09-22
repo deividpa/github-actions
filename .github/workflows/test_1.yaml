@@ -1,0 +1,18 @@
+name: Hola mundo
+
+on: [push]
+
+jobs:
+  hola:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hola mundo
+      run: echo "Hola mundo"
+
+  other:
+    runs-on: ubuntu-latest
+        
+    steps:
+    - name: LS
+      run: ls -al
