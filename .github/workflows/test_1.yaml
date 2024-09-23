@@ -3,7 +3,7 @@ name: Hola mundo
 on: [push]
 
 jobs:
-  test-build:
+  node-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,6 +11,10 @@ jobs:
       uses: actions/checkout@v4.1.7
 
     - name: ls
-      run: |
-        chmod +x script.sh
-        ./script.sh
+      run: ls -al
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.4
+    
+    - name: node version
+      run: node --version
